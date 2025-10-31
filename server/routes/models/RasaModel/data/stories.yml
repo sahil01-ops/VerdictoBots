@@ -1,0 +1,55 @@
+version: "3.1"
+
+stories:
+
+- story: Greet and show options
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: divisions of DOJ
+  steps:
+  - intent: ask_about_doj_divisions
+  - action: utter_doj_divisions
+
+- story: list of judges
+  steps:
+  - intent: ask_about_judges_list
+  - action: utter_judges_list
+
+- story: Finding Vacancies
+  steps:
+  - intent: ask_about_judges_vacancies
+  - action: utter_judges_vacancies
+
+- story: Pendency of Cases
+  steps:
+  - intent: ask_about_case_pendency
+  - action: utter_case_pendency
+
+- story: Traffic Fine Payment
+  steps:
+    - intent: ask_about_traffic_fine_payment
+    - action: utter_traffic_fine_payment
+
+- story: Provide live streaming link
+  steps:
+  - intent: ask_about_live_streaming
+  - action: utter_ask_state
+  - intent: choose_state
+  - action: action_provide_live_streaming_link
+
+- story: efiling and epayment
+  steps:
+  - intent: ask_about_efiling_epayment
+  - action: utter_efiling_epayment
+
+- story: Fast Track Courts
+  steps:
+  - intent: ask_about_fast_track_courts
+  - action: utter_fast_track_court
+
+- story: tele law services
+  steps:
+  - intent: ask_about_tele_law_services
+  - action: utter_tele_law_service

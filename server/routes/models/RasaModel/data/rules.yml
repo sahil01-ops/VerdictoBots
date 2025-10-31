@@ -1,0 +1,18 @@
+version: "3.1"
+
+rules:
+
+- rule: Say Hi whenever user greets
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: thanking
+  steps:
+  - intent: thank
+  - action: utter_thanks

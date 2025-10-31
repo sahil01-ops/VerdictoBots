@@ -1,0 +1,139 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: thank
+  examples: |
+    - thank you
+    - thanks
+    - thnx
+
+- intent: ask_about_doj_divisions
+  examples: |
+    - divisions of the Department of Justice?
+    - list of the different divisions in the DoJ?
+    - Tell me about the divisions under the DoJ.
+    - What departments are there in the DoJ?
+    - How is the DoJ organized?
+
+- intent: ask_about_judges_list
+  examples: |
+    - give me the list of the judges
+    - list of judges
+    - judges in courts
+
+- intent: ask_about_judges_vacancies
+  examples: |
+    - How many judges are there in the courts?
+    - number of total judges in courts
+    - What are the current vacancies in the courts?
+    - How many judge positions are vacant?
+    - Tell me the number of judges and vacancies in the courts.
+
+- intent: ask_about_case_pendency
+  examples: |
+    - What is the current status of case pendency?
+    - How many cases are pending in the courts?
+    - Can you provide the pendency data for cases?
+    - What does the NJDG say about case pendency?
+    - How many cases are still pending?
+
+- intent: ask_about_traffic_fine_payment
+  examples: |
+    - How can I pay my traffic fine?
+    - What is the procedure to pay a traffic fine?
+    - Can you guide me on paying traffic fines?
+    - How do I pay a traffic ticket online?
+    - Tell me the steps to pay a traffic fine.
+
+- intent: ask_about_live_streaming
+  examples: |
+    - I want to see the live streaming of the courts
+    - Show me the live streaming options for the courts
+    - Can I watch live court sessions?
+    - Live streaming of the courts
+    - Which courts are live streaming?
+    - Can I watch court cases live?
+    - How do I access live streaming of court cases?
+    - Is there a way to watch court proceedings online?
+    - Tell me about live streaming options for court cases.
+    - How can I view court cases live?
+
+- intent: choose_state
+  examples: |
+    - I want to see live streaming for [Gujarat](state)
+    - [Guwahati](state)
+    - [Jharkhand](state)
+    - [Karnataka](state)
+    - [Madhya Pradesh](state)
+    - [Orissa](state)
+    - Show me [Patna](state) live streaming
+
+- intent: ask_about_efiling_epayment
+  examples: |
+    - How do I file a case electronically?
+    - What is the process for eFiling in the courts?
+    - Can you guide me on the eFiling process?
+    - How can I make payments online for court services?
+    - Tell me how to do eFiling and ePayment.
+
+- intent: ask_about_fast_track_courts
+  examples: |
+    - What are fast track courts?
+    - Can you explain fast track courts?
+    - How do fast track courts work?
+    - Tell me about the fast track courts.
+    - What’s the purpose of fast track courts?
+
+- intent: ask_about_tele_law_services
+  examples: |
+    - What are Tele Law services?
+    - Can you tell me about Tele Law services?
+    - How do I access Tele Law services?
+    - What is the process for using Tele Law?
+    - Tell me more about Tele Law services.
+
+- intent: out_of_scope
+  examples: |
+    - I have a question not related to DoJ.
+    - Can you tell me the weather today?
+    - What’s the capital of France?
+    - Do you know who won the game last night?
+    - How do I cook pasta?

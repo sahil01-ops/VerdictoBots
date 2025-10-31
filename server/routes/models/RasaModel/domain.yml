@@ -1,0 +1,99 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - thank
+  - ask_about_doj_divisions
+  - ask_about_judges_list
+  - ask_about_judges_vacancies
+  - ask_about_case_pendency
+  - ask_about_traffic_fine_payment
+  - choose_state
+  - ask_about_live_streaming
+  - ask_about_efiling_epayment
+  - ask_about_fast_track_courts
+  - ask_about_tele_law_services
+  - out_of_scope
+
+entities:
+  - state
+
+actions:
+  - action_provide_live_streaming_link
+
+slots:
+  state:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: state
+
+responses:
+  utter_greet:
+  - text: "Hello! How can I assist you today? Here are some topics I can help you with:\n- DOJ Divisions\n- Judges List\n- Judges Vacancies\n- Case Pendency\n- Traffic Fine Payment\n- Live Streaming of Courts\n- eFiling and ePayment\n- Fast Track Courts\n- Tele Law Services\nPlease type your question or select an option."
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_thanks:
+  - text: "It was pleasure helping you."
+
+  utter_doj_divisions:
+  - text: "There are 50 divisions in DOJ."
+
+  utter_judges_list:
+  - text: "List of the Judges -"
+    buttons:
+    - title: "Supreme Court Judges"
+      payload: "https://cdnbbsr.s3waas.gov.in/s35d6646aad9bcc0be55b2c82f69750387/uploads/2024/08/20240801417686651.pdf"
+    - title: "High Court Judges"
+      payload: "https://doj.gov.in/list-of-high-court-judges/"
+    - title: "Chief Justice of High Court"
+      payload: "https://cdnbbsr.s3waas.gov.in/s35d6646aad9bcc0be55b2c82f69750387/uploads/2024/08/20240801284704788.pdf"
+
+  utter_judges_vacancies:
+  - text: "Follow the link to know the Vacancy Position - "
+    buttons:
+    - title: "Supreme Court Vacancies"
+      payload: "https://doj.gov.in/supreme-court-3/"
+    - title: "High Court Vacancies"
+      payload: "https://dashboard.doj.gov.in/vacancy-position/"
+    - title: "Total Vacancies"
+      payload: "https://cdnbbsr.s3waas.gov.in/s35d6646aad9bcc0be55b2c82f69750387/uploads/2024/08/20240801994943198.pdf"
+
+  utter_case_pendency:
+  - text: "Follow the link to get the Pendency of Cases. [NJDG Site](https://njdg.ecourts.gov.in/scnjdg/)"
+
+  utter_traffic_fine_payment:
+  - text: "There are 50 vacancies in courts."
+
+  utter_ask_state:
+  - text: "Here are the states with live streaming available:\n1. Gujarat\n2. Guwahati\n3. Jharkhand\n4. 
+  Karnataka\n5. Madhya Pradesh\n6. Orissa\n7. Patna\nPlease 
+  choose the state."
+
+  utter_live_streaming_link:
+  - text: "You can watch the live streaming for {state} High Court here: {link}"
+
+  utter_efiling_epayment:
+  - text: "You can file a case here - [eFiling](https://filing.ecourts.gov.in/pdedev/)"
+
+  utter_fast_track_court:
+  - text: "Go to the Fast Track Courts via [FTC](https://dashboard.doj.gov.in/fast-track-court/index.php)"
+
+  utter_tele_law_service:
+  - text: "You can avail the tele law services at - [Tele Law](https://doj.gov.in/tele-law/)"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
